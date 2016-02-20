@@ -1,0 +1,19 @@
+*** LocationManagerService$Receiver.smali	2016-02-16 18:54:52.026745550 +0530
+--- LocationManagerService$Receiver.smali	2016-02-16 18:58:47.434744860 +0530
+***************
+*** 13,19 ****
+  .end annotation
+  
+  .annotation system Ldalvik/annotation/InnerClass;
+!     accessFlags = 0x12
+      name = "Receiver"
+  .end annotation
+  
+--- 13,19 ----
+  .end annotation
+  
+  .annotation system Ldalvik/annotation/InnerClass;
+!     accessFlags = 0x10
+      name = "Receiver"
+  .end annotation
+  

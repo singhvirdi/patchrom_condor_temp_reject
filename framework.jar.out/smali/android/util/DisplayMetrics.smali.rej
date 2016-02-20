@@ -1,0 +1,40 @@
+*** DisplayMetrics.smali	2016-02-16 18:55:26.418745449 +0530
+--- DisplayMetrics.smali	2016-02-16 18:59:22.450744758 +0530
+***************
+*** 21,26 ****
+  
+  .field public static final DENSITY_MEDIUM:I = 0xa0
+  
+  .field public static final DENSITY_TV:I = 0xd5
+  
+  .field public static final DENSITY_XHIGH:I = 0x140
+--- 21,28 ----
+  
+  .field public static final DENSITY_MEDIUM:I = 0xa0
+  
++ .field public static final DENSITY_NXHGITH:I
++ 
+  .field public static final DENSITY_TV:I = 0xd5
+  
+  .field public static final DENSITY_XHIGH:I = 0x140
+***************
+*** 65,70 ****
+      .locals 1
+  
+      .prologue
+      invoke-static {}, Landroid/util/DisplayMetrics;->getDeviceDensity()I
+  
+      move-result v0
+--- 67,78 ----
+      .locals 1
+  
+      .prologue
++     invoke-static {}, Landroid/util/MiuiDisplayMetrics;->getNxhdpiDensity()I
++ 
++     move-result v0
++ 
++     sput v0, Landroid/util/DisplayMetrics;->DENSITY_NXHGITH:I
++ 
+      invoke-static {}, Landroid/util/DisplayMetrics;->getDeviceDensity()I
+  
+      move-result v0

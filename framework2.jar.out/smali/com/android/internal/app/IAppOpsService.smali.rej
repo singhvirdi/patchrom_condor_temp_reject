@@ -1,0 +1,48 @@
+*** IAppOpsService.smali	2016-02-16 18:54:59.230745529 +0530
+--- IAppOpsService.smali	2016-02-16 18:58:55.338744837 +0530
+***************
+*** 23,28 ****
+      .end annotation
+  .end method
+  
+  .method public abstract checkPackage(ILjava/lang/String;)I
+      .annotation system Ldalvik/annotation/Throws;
+          value = {
+--- 23,36 ----
+      .end annotation
+  .end method
+  
++ .method public abstract checkOperationInternal(IILjava/lang/String;)I
++     .annotation system Ldalvik/annotation/Throws;
++         value = {
++             Landroid/os/RemoteException;
++         }
++     .end annotation
++ .end method
++ 
+  .method public abstract checkPackage(ILjava/lang/String;)I
+      .annotation system Ldalvik/annotation/Throws;
+          value = {
+***************
+*** 89,94 ****
+      .annotation system Ldalvik/annotation/Throws;
+          value = {
+              Landroid/os/RemoteException;
+          }
+      .end annotation
+  .end method
+--- 97,110 ----
+      .annotation system Ldalvik/annotation/Throws;
+          value = {
+              Landroid/os/RemoteException;
++         }
++     .end annotation
++ .end method
++ 
++ .method public abstract registerCallback(Lcom/android/internal/app/IOpsCallback;)I
++     .annotation system Ldalvik/annotation/Throws;
++         value = {
++             Landroid/os/RemoteException;
+          }
+      .end annotation
+  .end method
